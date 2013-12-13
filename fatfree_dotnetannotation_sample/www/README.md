@@ -6,7 +6,7 @@ This is the GroupDocs PHP samples application written with FatFree framework.
 
 ### How to deploy and run sample app
 
- 1. Copy all files from api-samples folder to web root folder.
+ 1. Copy all files (www folder) from  fatfree_dotnetannotation_sample folder to web root folder.
  2. Restart apache and open "VIRTUALHOST_NAME" or  "VIRTUALHOST_NAME/view". (Example: http://annotationonfatfree/view)
 
 ### Requirements:
@@ -21,6 +21,7 @@ This is the GroupDocs PHP samples application written with FatFree framework.
 
 * Open sample "VIRTUALHOST_NAME/view".
 * Enter url to installed and configured GroupDocs Annotation for .NET (example: http://plugins-qa.groupdocs.dynabic.com:7878/)
+* Enter user name, or will be used default user.
 * Press Integrate button.
 
 The sample shows how to integrate GroupDocs Annotation for .NET as a jQuery plugin. The sample uses template to attach required scripts and run jQuer funtion.
