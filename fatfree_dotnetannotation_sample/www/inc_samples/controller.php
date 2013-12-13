@@ -22,12 +22,17 @@ if (empty($url)) {
     } else {
         $handler = "";
     }
+    //Check is URL returns status 200, if not send error to template
     $checkUrl = $url . "document-viewer/GetScript" . $handler . "?name=libs/jquery-ui-1.10.3.min.js";
     $headers = get_headers($checkUrl, 1);
     if ($headers[0] != 'HTTP/1.1 200 OK') {
         f3::set('error', 'Please change "Use HTTP handler checkbox"');
     }
+    //Get user name from form
     $userName = trim(strip_tags($userName));
+    if ($userName == "") {
+        $userName = "Anonymous";
+    }
     //Set variables for template
     F3::set("url", $url);
     F3::set("userName", $userName);
