@@ -4,6 +4,7 @@ F3::set('url', '');
 F3::set('handler', '');
 $url = F3::get('POST["url"]');
 $handler = F3::get('POST["handler"]');
+$userName = F3::get('POST["userName"]');
 //Check is URL entered
 if (empty($url)) {
     $error = 'Please enter URL of installed GroupDocs .NET Annotation';
@@ -26,8 +27,10 @@ if (empty($url)) {
     if ($headers[0] != 'HTTP/1.1 200 OK') {
         f3::set('error', 'Please change "Use HTTP handler checkbox"');
     }
+    $userName = trim(strip_tags($userName));
     //Set variables for template
     F3::set("url", $url);
+    F3::set("userName", $userName);
     F3::set("handler", $handler);
 }
 //Process template
