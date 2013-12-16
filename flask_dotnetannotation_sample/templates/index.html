@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GroupDocs .NET Annotation on Flask</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+    <h1 style="text-align:center;">GroupDocs .NET Annotation integration sample</h1>
+    <div style="padding:10px;">
+        <div>
+           <span> This sample will show how to integrate GroupDocs .NET Annotation to your aplication via jQuery plugin. </span>
+        </div>
+        <br />
+        <div id="requestForm" style="padding:20px; border:1px solid black;">
+            {% if error %}
+                <span style="color:red">{{ error }}</span>
+            {% else %}
+                <p> Please enter path to your GroupDocs .NET Annotation and press "Integrate" button</p>
+            {% endif %}
+            <br/>
+            <form action="/sample/" method = "post">
+                <label for='path'>GroupDocs .NET Annotation path</label>
+                <br/>
+                <br />
+                <input type='text' name='path' value="" size="50" />
+                <input type="checkbox" name="handler" value="true">Use Http Handlers
+                <br />
+                <input type='submit' value='Integrate'/>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
