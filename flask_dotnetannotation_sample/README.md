@@ -1,8 +1,8 @@
 ## Examples
 
-### GroupDocs PHP samples
+### GroupDocs Python samples
 
-This is the GroupDocs PHP samples application written with FatFree framework.
+This is the GroupDocs Python samples application written with FatFree framework.
 
 ### How to deploy and run sample app
 
@@ -11,15 +11,16 @@ This is the GroupDocs PHP samples application written with FatFree framework.
 
 ### Requirements:
 
-* PHP 5.3
-* Apache ModRewrite
-* PHP Curl extension
-* PHP Sockets extension (php_sockets.dll)
-
+* Python 2.7
+* Virtualenv
 
 ### Using:
 
-* Open sample "VIRTUALHOST_NAME/view".
+* Opan console and cd to Virtualenv 
+* cd to Scripts folder and run "activate"
+* cd to sample folder
+* run "Python app.py"
+* Open sample "VIRTUALHOST_NAME/".
 * Enter url to installed and configured GroupDocs Annotation for .NET (example: http://plugins-qa.groupdocs.dynabic.com:7878/)
 * Press Integrate button.
 
