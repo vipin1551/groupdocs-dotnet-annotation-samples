@@ -48,7 +48,8 @@
             <div class="content"><div class='highlight'><pre>F3::set(<span class="string">'url'</span>, <span class="string">''</span>);
 F3::set(<span class="string">'handler'</span>, <span class="string">''</span>);
 <span class="variable">$url</span> = F3::get(<span class="string">'POST["url"]'</span>);
-<span class="variable">$handler</span> = F3::get(<span class="string">'POST["handler"]'</span>);</pre></div></div>
+<span class="variable">$handler</span> = F3::get(<span class="string">'POST["handler"]'</span>);
+<span class="variable">$userName</span> = F3::get(<span class="string">'POST["userName"]'</span>);</pre></div></div>
             
         </li>
         
@@ -128,13 +129,15 @@ F3::set(<span class="string">'handler'</span>, <span class="string">''</span>);
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-7">&#182;</a>
               </div>
-              <p>Set variables for template</p>
+              <p>Check is URL returns status 200, if not send error to template</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    F3::set(<span class="string">"url"</span>, <span class="variable">$url</span>);
-    F3::set(<span class="string">"handler"</span>, <span class="variable">$handler</span>);
-}</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="variable">$checkUrl</span> = <span class="variable">$url</span> . <span class="string">"document-viewer/GetScript"</span> . <span class="variable">$handler</span> . <span class="string">"?name=libs/jquery-ui-1.10.3.min.js"</span>;
+    <span class="variable">$headers</span> = get_headers(<span class="variable">$checkUrl</span>, <span class="number">1</span>);
+    <span class="keyword">if</span> (<span class="variable">$headers</span>[<span class="number">0</span>] != <span class="string">'HTTP/1.1 200 OK'</span>) {
+        f3::set(<span class="string">'error'</span>, <span class="string">'Please change "Use HTTP handler checkbox"'</span>);
+    }</pre></div></div>
             
         </li>
         
@@ -144,6 +147,42 @@ F3::set(<span class="string">'handler'</span>, <span class="string">''</span>);
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Get user name from form</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="variable">$userName</span> = trim(strip_tags(<span class="variable">$userName</span>));
+    <span class="keyword">if</span> (<span class="variable">$userName</span> == <span class="string">""</span>) {
+        <span class="variable">$userName</span> = <span class="string">"Anonymous"</span>;
+    }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Set variables for template</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    F3::set(<span class="string">"url"</span>, <span class="variable">$url</span>);
+    F3::set(<span class="string">"userName"</span>, <span class="variable">$userName</span>);
+    F3::set(<span class="string">"handler"</span>, <span class="variable">$handler</span>);
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
               </div>
               <p>Process template</p>
 
