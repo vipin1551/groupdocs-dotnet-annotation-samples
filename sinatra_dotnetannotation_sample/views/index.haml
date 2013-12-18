@@ -1,0 +1,20 @@
+
+%h1{:style => 'text-align:center;color:#069;'}Integrate Groupdocs .NET Annotation
+%h2{:style => 'padding-top:40px'} This sample will show how to integrate the Groupdocs .NET Annotation using the jQuery plugin in Sinatra Framework
+
+%p{:style=>"text-align:left;font-size:21;padding:10px;padding-top:40px;"} Specify the path to the server where you installed Groupdocs .NET Annotation
+%div{:style=>'text-align:center;'}
+  %form{:action => '/sample', :enctype => 'multipart/form-data', :method => 'post', :style=>'padding-bottom:20px;'}
+    %font{:color=>'grey'} (Enter Url in such format: http://test.com:port)
+    %label{:for => 'path'}
+    %input{:type=>'text', :name=>'path', :size=>50}
+    %br/
+    %font{:color=>'grey'} (Use Http Handler)
+    %label{:for => 'useHttpHandler'}
+    %input{:type=>'checkbox', :name=>'useHttpHandler', :value => 'true'}
+    %br/
+    %font{:color=>'grey'} (User name for annotation assignment )
+    %label{:for => 'userName'}
+    %input{:type=>'text', :name=>'userName'}
+    %br/
+    %input{:type => 'submit', :value => 'Integrate'}
