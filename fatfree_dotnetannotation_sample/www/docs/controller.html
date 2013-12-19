@@ -49,7 +49,8 @@
 F3::set(<span class="string">'handler'</span>, <span class="string">''</span>);
 <span class="variable">$url</span> = F3::get(<span class="string">'POST["url"]'</span>);
 <span class="variable">$handler</span> = F3::get(<span class="string">'POST["handler"]'</span>);
-<span class="variable">$userName</span> = F3::get(<span class="string">'POST["userName"]'</span>);</pre></div></div>
+<span class="variable">$userName</span> = F3::get(<span class="string">'POST["userName"]'</span>);
+<span class="variable">$documentName</span> = F3::get(<span class="string">'POST["documentName"]'</span>);</pre></div></div>
             
         </li>
         
@@ -166,14 +167,11 @@ F3::set(<span class="string">'handler'</span>, <span class="string">''</span>);
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-9">&#182;</a>
               </div>
-              <p>Set variables for template</p>
+              <p>Remove spaces and tags from document name for view and annotate</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    F3::set(<span class="string">"url"</span>, <span class="variable">$url</span>);
-    F3::set(<span class="string">"userName"</span>, <span class="variable">$userName</span>);
-    F3::set(<span class="string">"handler"</span>, <span class="variable">$handler</span>);
-}</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="variable">$documentName</span> = trim(strip_tags(<span class="variable">$documentName</span>));</pre></div></div>
             
         </li>
         
@@ -183,6 +181,25 @@ F3::set(<span class="string">'handler'</span>, <span class="string">''</span>);
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Set variables for template</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    F3::set(<span class="string">"url"</span>, <span class="variable">$url</span>);
+    F3::set(<span class="string">"userName"</span>, <span class="variable">$userName</span>);
+    F3::set(<span class="string">"handler"</span>, <span class="variable">$handler</span>);
+    F3::set(<span class="string">"documentName"</span>, <span class="variable">$documentName</span>);
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
               </div>
               <p>Process template</p>
 

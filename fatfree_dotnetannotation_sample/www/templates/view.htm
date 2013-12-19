@@ -31,14 +31,13 @@
                     var userName = "{{@userName}}";
                     $.ajax({
                         type: "POST",
-                        url: "http://plugins-qa.groupdocs.dynabic.com:7878/home/getId",
+                        url: "{{@url}}home/getId",
                         data: "un=" + userName,
-                        success: function (userId){
-                            document.cookie = "domain=plugins-qa.groupdocs.dynabic.com:7878; path=/; .ASPXAUTH=" + userId[0];
+                        success: function (userInfo){
                             var annotationWidget = $('#annotation-widget').groupdocsAnnotation({
                                 width: 600,
                                 height: 800,
-                                fileId: 'Quick_Start_Guide_To_Using_GroupDocs.pdf',
+                                fileId: '{{@documentName}}',
                                 docViewerId: 'annotation-widget-doc-viewer',
                                 quality: 90,
                                 enableRightClickMenu: false,
@@ -63,8 +62,8 @@
                                 _mode: 'annotatedDocument',
                                 selectionContainerSelector: "[name='selection-content']",
                                 graphicsContainerSelector: '.annotationsContainer',
-                                userName: '{{@userName}}', 
-                                userId: userId[1],
+                                userName: userInfo[1], 
+                                userId: userInfo[0],
                                 enabledTools: -1,
                                 enableSidePanel: true,
                             });
@@ -220,6 +219,10 @@
                         <label for='userName'>User name for annotation assignment</label>
                         <br />
                         <input type="text" name="userName" id="userName" value="" />
+                        <br />
+                        <label for='userName'>Document to annotate</label>
+                        <br />
+                        <input type="text" name="documentName" id="documentName" value="" />
                         <br />
                         <input type='submit' value='Integrate'/>
                     </form>
