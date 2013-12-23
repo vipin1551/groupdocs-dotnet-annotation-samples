@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Powered by <?php echo  (F3::get('ESCAPE')?F3::htmlencode(($_VERSION=F3::get('VERSION'))):($_VERSION=F3::get('VERSION'))) ; ?></title>
+        <style type="text/css">
+            <?php echo  Web::minify('templates/',array('style.css'),FALSE) ; ?>
+        </style>
+    </head>
+    <body>
+        <div style="padding:20px; text-align:center;"><h2><a href="">GroupDocs .NET Annotation Sample</a></h2></div>
+        <center>
+            <span>
+                <h2>
+                    <a href="view">Itegration sample</a>
+                </h2>
+            </span>
+        </center>
+</body>
+</html>

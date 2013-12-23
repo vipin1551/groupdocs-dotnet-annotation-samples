@@ -6,6 +6,7 @@ $url = F3::get('POST["url"]');
 $header = F3::get('POST["header"]');
 $userName = F3::get('POST["userName"]');
 $documentName = F3::get('POST["documentName"]');
+$handler = F3::get('POST["handler"]');
 //Check is URL entered
 if (empty($url)) {
     $error = 'Please enter URL of installed GroupDocs .NET Annotation';
@@ -26,6 +27,14 @@ if (empty($url)) {
     if ($header == null) {
         $header = "false";
     }
+    //Set use or not Handler for URL
+    if ($handler == true) {
+        $handler = "Handler";
+        $useHandler = 'true';
+    } else {
+        $handler = "";
+        $useHandler = 'false';
+    }
     //Remove spaces and tags from document name for view and annotate
     $documentName = trim(strip_tags($documentName));
     //Check if document name is empty set document name for default file
@@ -37,6 +46,8 @@ if (empty($url)) {
     F3::set("userName", $userName);
     F3::set("header", $header);
     F3::set("documentName", $documentName);
+    F3::set("handler", $handler);
+    F3::set("useHandler", $useHandler);
 }
 //Process template
 echo Template::serve('view.htm');
