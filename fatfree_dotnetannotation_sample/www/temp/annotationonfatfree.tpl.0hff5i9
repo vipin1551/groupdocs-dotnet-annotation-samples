@@ -10,20 +10,20 @@
             
                 <script src="<?php echo  $_url ; ?>Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
                 <script src="<?php echo  $_url ; ?>Scripts/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript<?php echo  (F3::get('ESCAPE')?F3::htmlencode(($_handler=F3::get('handler'))):($_handler=F3::get('handler'))) ; ?>?name=libs/jquery-1.9.1.min.js'></script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript<?php echo  $_handler ; ?>?name=libs/jquery-ui-1.10.3.min.js'></script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript<?php echo  $_handler ; ?>?name=libs/knockout-2.2.1.js'></script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript<?php echo  $_handler ; ?>?name=libs/turn.min.js'></script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript<?php echo  $_handler ; ?>?name=libs/modernizr.2.6.2.Transform2d.min.js'></script><script type='text/javascript'>if (!window.Modernizr.csstransforms)   $.ajax({url: '<?php echo  $_url ; ?>document-viewer/GetScript<?php echo  $_handler ; ?>?name=libs/turn.html4.min.js', dataType: 'script', type: 'GET', async: false});</script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript<?php echo  $_handler ; ?>?name=installableViewer.min.js'></script><script type='text/javascript'>$.ui.groupdocsViewer.prototype.applicationPath = '<?php echo  $_url ; ?>';</script><script type='text/javascript'>$.ui.groupdocsViewer.prototype.useHttpHandlers = false;</script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript<?php echo  $_handler ; ?>?name=GroupdocsViewer.all.min.js'></script><link rel='stylesheet' type='text/css' href='<?php echo  $_url ; ?>document-viewer/CSS/GetCss?name=bootstrap.css' /><link rel='stylesheet' type='text/css' href='<?php echo  $_url ; ?>document-viewer/CSS/GetCss?name=GroupdocsViewer.all.min.css' /><link rel='stylesheet' type='text/css' href='<?php echo  $_url ; ?>document-viewer/CSS/GetCss?name=jquery-ui-1.10.3.dialog.min.css' />
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=RaphaelJS/raphael-min.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=libs/jquery.signalR-1.1.2.min.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=libs/jquery.tinyscrollbar.min.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=AnnotationService.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=Annotation2.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=AreaAnnotation.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=PointAnnotation.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=TextStrikeout.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=PolylineAnnotation.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=TextStrikeout.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=TextField.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=Watermark.js'></script>
-                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript<?php echo  $_handler ; ?>?name=AnnotationWidget.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript?name=libs/jquery-1.9.1.min.js'></script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript?name=libs/jquery-ui-1.10.3.min.js'></script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript?name=libs/knockout-2.2.1.js'></script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript?name=libs/turn.min.js'></script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript?name=libs/modernizr.2.6.2.Transform2d.min.js'></script><script type='text/javascript'>if (!window.Modernizr.csstransforms)   $.ajax({url: '<?php echo  $_url ; ?>document-viewer/GetScript?name=libs/turn.html4.min.js', dataType: 'script', type: 'GET', async: false});</script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript?name=installableViewer.min.js'></script><script type='text/javascript'>$.ui.groupdocsViewer.prototype.applicationPath = '<?php echo  $_url ; ?>';</script><script type='text/javascript'>$.ui.groupdocsViewer.prototype.useHttpHandlers = false;</script><script type='text/javascript' src='<?php echo  $_url ; ?>document-viewer/GetScript?name=GroupdocsViewer.all.min.js'></script><link rel='stylesheet' type='text/css' href='<?php echo  $_url ; ?>document-viewer/CSS/GetCss?name=bootstrap.css' /><link rel='stylesheet' type='text/css' href='<?php echo  $_url ; ?>document-viewer/CSS/GetCss?name=GroupdocsViewer.all.min.css' /><link rel='stylesheet' type='text/css' href='<?php echo  $_url ; ?>document-viewer/CSS/GetCss?name=jquery-ui-1.10.3.dialog.min.css' />
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=RaphaelJS/raphael-min.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=libs/jquery.signalR-1.1.2.min.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=libs/jquery.tinyscrollbar.min.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=AnnotationService.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=Annotation2.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=AreaAnnotation.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=PointAnnotation.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=TextStrikeout.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=PolylineAnnotation.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=TextStrikeout.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=TextField.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=Watermark.js'></script>
+                <script type='text/javascript' src='<?php echo  $_url ; ?>document-annotation/GetScript?name=AnnotationWidget.js'></script>
                 <link rel='stylesheet' type='text/css' href='<?php echo  $_url ; ?>document-annotation/CSS/GetCss?name=Annotation.css' />
                 <link rel='stylesheet' type='text/css' href='<?php echo  $_url ; ?>document-annotation/CSS/GetCss?name=Toolbox.css' />
                 <script type="text/javascript" src="<?php echo  $_url ; ?>signalr1_1_2/hubs"></script>
@@ -41,10 +41,11 @@
                                 docViewerId: 'annotation-widget-doc-viewer',
                                 quality: 90,
                                 enableRightClickMenu: false,
+                                showHeader: <?php echo (F3::get('ESCAPE')?F3::htmlencode(($_header=F3::get('header'))):($_header=F3::get('header'))); ?>,
                                 showZoom: true,
                                 showPaging: true,
                                 showPrint: false,
-                                showFileExplorer: false,
+                                showFileExplorer: true,
                                 showThumbnails: true,
                                 openThumbnails: false,
                                 zoomToFitWidth: false,
@@ -209,12 +210,12 @@
             <?php if ((F3::get('ESCAPE')?F3::htmlencode(($_url=F3::get('url'))):($_url=F3::get('url'))) ==''): ?>
                 
                     <div id="requestForm" style="padding:20px; border:1px solid black;">
-                    <p> Enter data for request and press "Make request" button </p>
+                    <p> Enter data for request and press "Integrate" button </p>
                     <form action="view" method = "post" >
                         <label for='url'>URL of installed GroupDocs .NET Annotation</label>
                         <br />
                         <input type='text' id="url" name='url' value="<?php echo $_url; ?>" />
-                        <input type='checkbox' id="handler" name='handler'  value="true" />Use HTTP handler
+                        <input type='checkbox' id="header" name='header'  value="true" />Show header
                         <br />
                         <label for='userName'>User name for annotation assignment</label>
                         <br />

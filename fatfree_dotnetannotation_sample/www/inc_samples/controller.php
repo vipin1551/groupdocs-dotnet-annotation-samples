@@ -3,7 +3,7 @@
 F3::set('url', '');
 F3::set('handler', '');
 $url = F3::get('POST["url"]');
-$handler = F3::get('POST["handler"]');
+$header = F3::get('POST["header"]');
 $userName = F3::get('POST["userName"]');
 $documentName = F3::get('POST["documentName"]');
 //Check is URL entered
@@ -17,29 +17,25 @@ if (empty($url)) {
     if (substr($url, -1) != "/") {
         $url = $url . "/";
     }
-    //Set use or not Handler for URL
-    if ($handler == true) {
-        $handler = "Handler";
-    } else {
-        $handler = "";
-    }
-    //Check is URL returns status 200, if not send error to template
-    $checkUrl = $url . "document-viewer/GetScript" . $handler . "?name=libs/jquery-ui-1.10.3.min.js";
-    $headers = get_headers($checkUrl, 1);
-    if ($headers[0] != 'HTTP/1.1 200 OK') {
-        f3::set('error', 'Please change "Use HTTP handler checkbox"');
-    }
     //Get user name from form
     $userName = trim(strip_tags($userName));
     if ($userName == "") {
         $userName = "Anonymous";
     }
+    //Check is Show header checkbox is checked if not set property to false
+    if ($header == null) {
+        $header = "false";
+    }
     //Remove spaces and tags from document name for view and annotate
     $documentName = trim(strip_tags($documentName));
+    //Check if document name is empty set document name for default file
+    if ($documentName == "") {
+        $documentName = "Quick_Start_Guide_To_Using_GroupDocs.pdf";
+    }       
     //Set variables for template
     F3::set("url", $url);
     F3::set("userName", $userName);
-    F3::set("handler", $handler);
+    F3::set("header", $header);
     F3::set("documentName", $documentName);
 }
 //Process template
