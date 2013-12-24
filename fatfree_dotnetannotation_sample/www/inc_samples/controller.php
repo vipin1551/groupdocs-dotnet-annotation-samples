@@ -31,9 +31,13 @@ if (empty($url)) {
     if ($handler == true) {
         $handler = "Handler";
         $useHandler = 'true';
+        $ajaxPath = $url . "ajax.ashx/" . $userName;
+        $data = "";
     } else {
         $handler = "";
         $useHandler = 'false';
+        $ajaxPath = $url . "home/getId/";
+        $data = "un=" . $userName;
     }
     //Remove spaces and tags from document name for view and annotate
     $documentName = trim(strip_tags($documentName));
@@ -48,6 +52,8 @@ if (empty($url)) {
     F3::set("documentName", $documentName);
     F3::set("handler", $handler);
     F3::set("useHandler", $useHandler);
+    F3::set("ajaxPath", $ajaxPath);
+    F3::set("data", $data);
 }
 //Process template
 echo Template::serve('view.htm');

@@ -43,9 +43,15 @@
                     var userName = "{{@userName}}";
                     $.ajax({
                         type: "POST",
-                        url: "{{@url}}home/getId",
-                        data: "un=" + userName,
+                        url: "{{@ajaxPath}}",
+                        data: "{{@data}}",
                         success: function (userInfo){
+                            var userId = "";
+                            if (typeof userInfo === "object") {
+                                userId = userInfo[0];
+                            } else {
+                                userId = userInfo
+                            }
                             var annotationWidget = $('#annotation-widget').groupdocsAnnotation({
                                 width: 600,
                                 height: 800,
@@ -75,8 +81,8 @@
                                 _mode: 'annotatedDocument',
                                 selectionContainerSelector: "[name='selection-content']",
                                 graphicsContainerSelector: '.annotationsContainer',
-                                userName: userInfo[1],
-                                userId: userInfo[0],
+                                userName: "{{@userName}}",
+                                userId: userId,
                                 enabledTools: -1,
                                 enableSidePanel: true
                             });

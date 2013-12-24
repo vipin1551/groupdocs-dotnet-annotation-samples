@@ -43,8 +43,8 @@
                     var userName = "<?php echo (F3::get('ESCAPE')?F3::htmlencode(($_userName=F3::get('userName'))):($_userName=F3::get('userName'))); ?>";
                     $.ajax({
                         type: "POST",
-                        url: "<?php echo $_url; ?>home/getId",
-                        data: "un=" + userName,
+                        url: "<?php echo (F3::get('ESCAPE')?F3::htmlencode(($_ajaxPath=F3::get('ajaxPath'))):($_ajaxPath=F3::get('ajaxPath'))); ?>",
+                        data: "<?php echo (F3::get('ESCAPE')?F3::htmlencode(($_data=F3::get('data'))):($_data=F3::get('data'))); ?>",
                         success: function (userInfo){
                             var annotationWidget = $('#annotation-widget').groupdocsAnnotation({
                                 width: 600,
