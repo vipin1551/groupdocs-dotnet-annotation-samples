@@ -23,7 +23,9 @@ This is the GroupDocs PHP samples application written with FatFree framework.
 * Enter url to installed and configured GroupDocs Annotation for .NET (example: http://plugins-qa.groupdocs.dynabic.com:7878/)
 * Press Integrate button.
 
-The sample shows how to integrate GroupDocs Annotation for .NET as a jQuery plugin. The sample uses template to attach required scripts and run jQuer funtion.
+The sample shows how to integrate GroupDocs Annotation for .NET as a jQuery plugin. The sample uses template to attach required scripts and run jQuery funtion.
+
+The sample works with .NET MVC and WebForms samples. To work with WebForms sample - please check "Use Http Handler" checkboks. It will add Handler word to requests and will make another type of ajax request. 
 
 
 ###Created by [Marketplace Team](http://groupdocs.com/marketplace/).
